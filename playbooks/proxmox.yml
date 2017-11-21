@@ -5,6 +5,6 @@
 #   roles:
 #     - role: proxmox
 
-- hosts: lab
+- hosts: all
   tasks:
     - import_tasks: ../tasks/proxmox_clone_vm.yml
