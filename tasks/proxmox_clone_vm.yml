@@ -4,8 +4,8 @@
     api_user    : '{{ api_user }}'
     api_password: '{{ api_password }}'
     api_host    : '{{ api_host }}'
-    clone       : Centos6 # Nombre template
-    vmid        : 100 # ID Template
+    clone       : Centos7 # Nombre template
+    vmid        : 105 # ID Template
 #    newid       : 901 #ID VM
     name        : '{{ name }}'  # The target VM name
     node        : '{{ node }}'
