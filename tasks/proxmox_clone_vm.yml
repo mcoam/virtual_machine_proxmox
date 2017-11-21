@@ -1,0 +1,29 @@
+---
+- name: "Clonando VM"
+  proxmox_kvm:
+    api_user    : '{{ api_user }}'
+    api_password: '{{ api_password }}'
+    api_host    : '{{ api_host }}'
+    clone       : Centos6 # Nombre template
+    vmid        : 100 # ID Template
+#    newid       : 901 #ID VM
+    name        : '{{ name }}'  # The target VM name
+    node        : '{{ node }}'
+    storage     : '{{ storage }}'
+    timeout     : 200  # Note: The task can take a while. Adapt
+    net         : '{"net0":"name=eth1,gw=192.168.1.1,ip=192.168.1.120/24,bridge=vmbr0"}'
+
+- name: "Esperando que termine de crear la VM '{{ name }}' para seguir . . ."
+  wait_for:
+    timeout: 3 #segundos
+
+### Configurar Qemu-guest-agent  https://pve.proxmox.com/wiki/Qemu-guest-agent
+
+- name: "Levantando VM '{{ name }}' "
+  proxmox_kvm:
+    api_user    : '{{ api_user }}'
+    api_password: '{{ api_password }}'
+    api_host    : '{{ api_host }}'
+    name        : '{{ name }}'
+    node        : '{{ node }}'
+    state       : started

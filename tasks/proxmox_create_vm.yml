@@ -1,0 +1,14 @@
+---
+##INSTALL
+- proxmox_kvm:
+    api_user    : root@pam
+    api_password: itlinux.2012
+    api_host    : 192.168.1.5
+    name        : testing4
+    node        : proxmox03
+    net         : '{"net0":"virtio,bridge=vmbr0,rate=200"}'
+    virtio      : '{"virtio0":"local:10"}'
+    cores       : 1
+    vcpus       : 1
+    memory      : 2048
+#    vmid        : 600
