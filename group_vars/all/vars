@@ -1,6 +1,7 @@
 ---
 # group-vars.yml
-  api_user: root@pam
+  api_user: mcoa@pam
+  api_password: pass123
   api_host: 192.168.1.5
   clone: Centos7 # Nombre template
   vmid: 100 # ID Template
