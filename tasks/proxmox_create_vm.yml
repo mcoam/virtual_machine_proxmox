@@ -2,7 +2,6 @@
 ##INSTALL
 - proxmox_kvm:
     api_user    : root@pam
-    api_password: itlinux.2012
     api_host    : 192.168.1.5
     name        : testing4
     node        : proxmox03

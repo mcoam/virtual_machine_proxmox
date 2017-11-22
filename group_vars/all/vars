@@ -1,0 +1,11 @@
+---
+# group-vars.yml
+  api_user: root@pam
+  api_host: 192.168.1.5
+  clone: Centos7 # Nombre template
+  vmid: 100 # ID Template
+  #newid   : 901 #ID VM
+  name: testing1000  # The target VM name
+  node: proxmox03
+  storage: local
+  timeout: 300  # Note: The task can take a while. Adapt
