@@ -15,7 +15,7 @@
 
 - name: "Esperando que termine de crear la VM '{{ name }}' para seguir . . ."
   wait_for:
-    timeout: 3 #segundos
+    timeout: 5 #segundos
 
 ### Configurar Qemu-guest-agent  https://pve.proxmox.com/wiki/Qemu-guest-agent
 
