@@ -1,5 +1,5 @@
 ---
-- name: "Clonando VM"
+- name: "Clonando VM desde Centos7 template "
   proxmox_kvm:
     api_user    : '{{ api_user }}'
     api_password: '{{ api_password }}'
